@@ -17,7 +17,7 @@ function search(event) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function formatDate(date) {
+function formatDates(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let day = date.getDay();
@@ -50,4 +50,4 @@ searchForm.addEventListener("submit", search);
 let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 
-currentDateELement.innerHTML = formatDate(currentDate);
+currentDateELement.innerHTML = formatDates(currentDate);
